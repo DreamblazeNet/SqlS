@@ -17,6 +17,9 @@
     <option name="scrTextFileName" value="" />
     <option name="historyRevisionsNumber" value="4" />
   </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="IdProvider" IDEtalkID="AF33F50323514CAB9579D3F1E04C5A0A" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />

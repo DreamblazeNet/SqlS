@@ -18,7 +18,7 @@
  *    along with StupidPrlf.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class MemoryObjectStore {
     private static $store = array();

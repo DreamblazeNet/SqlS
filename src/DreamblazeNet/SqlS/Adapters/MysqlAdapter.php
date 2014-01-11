@@ -5,7 +5,9 @@
  *
  * @package ActiveRecord
  */
-namespace Dreamblaze\SqlS\Adapters;
+namespace DreamblazeNet\SqlS\Adapters;
+
+use DreamblazeNet\SqlS\DatabaseConnection;
 
 class MysqlAdapter extends DatabaseConnection {
 
@@ -63,5 +65,3 @@ class MysqlAdapter extends DatabaseConnection {
     }
 
 }
-
-?>

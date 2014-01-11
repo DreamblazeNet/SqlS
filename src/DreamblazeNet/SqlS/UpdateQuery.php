@@ -1,5 +1,5 @@
 <?php
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class UpdateQuery extends BaseQuery {
 

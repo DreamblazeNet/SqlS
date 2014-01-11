@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 use PDO;
 use PDOException;
 
@@ -60,7 +60,7 @@ abstract class DatabaseConnection {
             $this->connection = new PDO("$info->protocol:$host;dbname=$info->db", $info->user, $info->pass, static::$PDO_OPTIONS);
         } catch (PDOException $e) {
             $this->log->error($e->getMessage() . "\n" . $e->getTraceAsString() . "\n");
-            throw new Database_Exception("Can't connect to database {$info->db}", $e->getCode() , $e);
+            throw new DatabaseException("Can't connect to database {$info->db}", $e->getCode() , $e);
         }
     }
 
@@ -123,24 +123,21 @@ abstract class DatabaseConnection {
         $this->last_query = $sql;
         $this->log->debug($sql . ' => ' . var_export($values,true));
         try {
-            if (!($sth = $this->connection->prepare($sql)))
+            if (!($sth = $this->connection->prepare($sql))){
                 $this->log->error('PDO Prepare ERROR!' . ' SQL:' . $sql);
-        } catch (PDOException $e) {
-            $this->log->error(array($e->getMessage(), $e->getTraceAsString()));
-        }
+                throw new \Exception($this->connection->errorInfo(), $this->connection->errorCode());
+            }
+            $sth->setFetchMode(PDO::FETCH_ASSOC);
 
-        $sth->setFetchMode(PDO::FETCH_ASSOC);
-        
-        try {
             if (!$sth->execute($values)){
                 $this->log->error(array('PDO Exec ERROR!', "SQL: " . $sql , "VALUES: " . var_export($values, true) ,'PDO: ' . $sth->errorInfo()));
-                throw new Database_Exception("PDO Exec ERROR! (1)", $e->getCode() , $e);
+                throw new DatabaseException("PDO Exec ERROR! (1)", $sth->errorCode(), new \Exception($sth->errorInfo()));
             }
-
         } catch (PDOException $e) {
-            $this->log->error(array('PDO Exec ERROR!' , "SQL: " . $sql , "VALUES: " . var_export($values, true) , "PDO: " . $e->getMessage()));
-            throw $e;
+            $this->log->error(array($e->getMessage(), $e->getTraceAsString()));
+            throw new DatabaseException("PDO Exec ERROR! (1)", $e->getCode() , $e);
         }
+
         return $sth;
     }
 

@@ -1,5 +1,5 @@
 <?php
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class SelectQuery extends BaseQuery {
     protected $type = 'many'; /* none, one or many */

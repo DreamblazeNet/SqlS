@@ -4,7 +4,7 @@
  * 
  */
 
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class DatabaseException extends \Exception {
     

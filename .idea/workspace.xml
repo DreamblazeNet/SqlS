@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2ae683f-7723-47cb-a831-288bad1dd7ab" name="Default" comment="" />
+    <list default="true" id="c2ae683f-7723-47cb-a831-288bad1dd7ab" name="Default" comment="fixed namespace and test issues&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpunit.xml" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\Adapters\MysqlAdapter.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/Adapters/MysqlAdapter.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\BaseQuery.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/BaseQuery.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\DatabaseConfig.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseConfig.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\DatabaseConnection.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseConnection.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\DatabaseException.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseException.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\DatabaseManager.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseManager.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\DatabaseObject.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseObject.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\FindQuery.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/FindQuery.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\InsertQuery.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/InsertQuery.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\MemoryObjectStore.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/MemoryObjectStore.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\QueryBuilder.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/QueryBuilder.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\SelectQuery.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/SelectQuery.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\src\UpdateQuery.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/UpdateQuery.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\tests\QueryInsert.php" afterPath="$PROJECT_DIR$/tests/InsertQueryTest.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\tests\QuerySelect.php" afterPath="$PROJECT_DIR$/tests/SelectQueryTest.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\tests\QueryUpdate.php" afterPath="$PROJECT_DIR$/tests/UpdateQueryTest.php" />
+      <change type="MOVED" beforePath="C:\Projects\DreamblazeNet\SqlS\tests\testDBObject.php" afterPath="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DummyDatabaseObject.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SqlS.iml" afterPath="$PROJECT_DIR$/SqlS.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SqlS.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,96 +92,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DatabaseManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DatabaseManager.php">
+      <file leaf-file-name="SelectQueryTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/SelectQueryTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="95" selection-end="95" vertical-scroll-proportion="-0.65384614" vertical-offset="102" max-vertical-offset="2329">
+            <state line="38" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-4.769231" vertical-offset="522" max-vertical-offset="1445">
+              <folding>
+                <marker date="1389454385005" expanded="true" signature="642:688" placeholder="SELECT {$thi..." />
+                <marker date="1389454385005" expanded="true" signature="877:953" placeholder="SELECT {$thi..." />
+                <marker date="1389454385005" expanded="true" signature="1382:1461" placeholder="SELECT {$thi..." />
+                <marker date="1389454385005" expanded="true" signature="1818:1873" placeholder="SELECT DISTI..." />
+                <marker date="1389454385005" expanded="true" signature="2110:2175" placeholder="SELECT count..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertQuery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/InsertQuery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="51" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-4.769231" vertical-offset="709" max-vertical-offset="1207">
+              <folding>
+                <marker date="1389458477429" expanded="true" signature="1446:1495" placeholder="INSERT INTO ..." />
+                <marker date="1389458477429" expanded="true" signature="1535:1600" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectQuery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/SelectQuery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="20" selection-start="572" selection-end="572" vertical-scroll-proportion="9.807693" vertical-offset="663" max-vertical-offset="2363">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseManager.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="29" selection-start="3692" selection-end="3692" vertical-scroll-proportion="-4.769231" vertical-offset="1848" max-vertical-offset="2329">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseException.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="34" selection-start="246" selection-end="246" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="374">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseQuery.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/BaseQuery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="196" column="18" selection-start="5749" selection-end="5749" vertical-scroll-proportion="9.574713" vertical-offset="0" max-vertical-offset="3944">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertQueryTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/InsertQueryTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-4.6153846" vertical-offset="543" max-vertical-offset="1190">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DatabaseObject.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DatabaseObject.php">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseObject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="14" selection-start="49" selection-end="49" vertical-scroll-proportion="-0.65384614" vertical-offset="51" max-vertical-offset="4420">
+            <state line="181" column="23" selection-start="5421" selection-end="5421" vertical-scroll-proportion="-2.27451" vertical-offset="2961" max-vertical-offset="4488">
               <folding>
-                <marker date="1389322217646" expanded="true" signature="3667:3714" placeholder="DELETE FROM ..." />
+                <marker date="1389458272351" expanded="true" signature="3848:3895" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindQuery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FindQuery.php">
+      <file leaf-file-name="DatabaseConfig.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseConfig.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="888" selection-end="888" vertical-scroll-proportion="-1.3076923" vertical-offset="51" max-vertical-offset="2125">
+            <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertQuery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InsertQuery.php">
+      <file leaf-file-name="DatabaseConnection.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseConnection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="35" selection-start="69" selection-end="69" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="1207">
-              <folding>
-                <marker date="1389322282660" expanded="true" signature="1431:1474" placeholder="INSERT INTO ..." />
-                <marker date="1389322282660" expanded="true" signature="1514:1567" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemoryObjectStore.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MemoryObjectStore.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1020">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryBuilder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/QueryBuilder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="11" selection-start="46" selection-end="46" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="408">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectQuery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SelectQuery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="35" selection-start="69" selection-end="69" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="2363">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateQuery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UpdateQuery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="32" selection-start="103" selection-end="103" vertical-scroll-proportion="-0.0" vertical-offset="85" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="26" selection-start="597" selection-end="597" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="578">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="61" selection-start="35" selection-end="35" vertical-scroll-proportion="0.07538803" vertical-offset="0" max-vertical-offset="451">
+            <state line="139" column="8" selection-start="4249" selection-end="4249" vertical-scroll-proportion="-9.115385" vertical-offset="2109" max-vertical-offset="3502">
               <folding />
             </state>
           </provider>
@@ -169,6 +199,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -185,15 +218,43 @@
         <option value="$PROJECT_DIR$/src/Query/Insert.php" />
         <option value="$PROJECT_DIR$/src/Query/Select.php" />
         <option value="$PROJECT_DIR$/src/Query/Update.php" />
-        <option value="$PROJECT_DIR$/tests/QueryInsert.php" />
-        <option value="$PROJECT_DIR$/src/DatabaseConnection.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/DatabaseException.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Adapters/MysqlAdapter.php" />
+        <option value="$PROJECT_DIR$/src/BaseQuery.php" />
+        <option value="$PROJECT_DIR$/src/DatabaseConfig.php" />
+        <option value="$PROJECT_DIR$/src/DatabaseConnection.php" />
+        <option value="$PROJECT_DIR$/src/DatabaseException.php" />
+        <option value="$PROJECT_DIR$/src/DatabaseManager.php" />
+        <option value="$PROJECT_DIR$/src/DatabaseObject.php" />
+        <option value="$PROJECT_DIR$/src/FindQuery.php" />
+        <option value="$PROJECT_DIR$/src/InsertQuery.php" />
+        <option value="$PROJECT_DIR$/src/MemoryObjectStore.php" />
+        <option value="$PROJECT_DIR$/src/QueryBuilder.php" />
+        <option value="$PROJECT_DIR$/src/SelectQuery.php" />
+        <option value="$PROJECT_DIR$/src/UpdateQuery.php" />
+        <option value="$PROJECT_DIR$/tests/testDBObject.php" />
+        <option value="$PROJECT_DIR$/tests/BaseTest.php" />
+        <option value="$PROJECT_DIR$/tests/QueryInsert.php" />
+        <option value="$PROJECT_DIR$/tests/QuerySelect.php" />
+        <option value="$PROJECT_DIR$/tests/QueryUpdate.php" />
+        <option value="$PROJECT_DIR$/phpunit.xml" />
+        <option value="$PROJECT_DIR$/tests/DummyDatabaseObject.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/QueryBuilder.php" />
+        <option value="$PROJECT_DIR$/tests/InsertQueryTest.php" />
+        <option value="$PROJECT_DIR$/tests/UpdateQueryTest.php" />
+        <option value="$PROJECT_DIR$/tests/SelectQueryTest.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/Adapters/MysqlAdapter.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/FindQuery.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseManager.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseConnection.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseObject.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/InsertQuery.php" />
+        <option value="$PROJECT_DIR$/src/DreamblazeNet/SqlS/BaseQuery.php" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
@@ -260,6 +321,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SqlS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -272,8 +387,10 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/phpunit.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -282,11 +399,20 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\DreamblazeNet\SqlS\src\DreamblazeNet\SqlS" />
       <recent name="C:\Projects\DreamblazeNet\SqlS\src" />
       <recent name="C:\Projects\DreamblazeNet\SqlS\tests" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.Run Tests">
+    <configuration default="false" name="SelectQueryTest.testWhere" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="DreamblazeNet\SqlS\SelectQueryTest" file="$PROJECT_DIR$/tests/SelectQueryTest.php" method="testWhere" scope="Method" />
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpUnitDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpUnitDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -649,7 +775,23 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="Run Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner directory="$PROJECT_DIR$/tests" scope="XML" />
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpUnitDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpUnitDebugRunner" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="PHPUnit.Run Tests" />
+      <item index="1" class="java.lang.String" itemvalue="PHPUnit.SelectQueryTest.testWhere" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.SelectQueryTest.testWhere" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -678,42 +820,43 @@
       <changelist id="c2ae683f-7723-47cb-a831-288bad1dd7ab" name="Default" comment="" />
       <created>1389321835403</created>
       <updated>1389321835403</updated>
-      <workItem from="1389321839312" duration="2776000" />
+      <workItem from="1389321839312" duration="15549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2776000" />
+    <option name="totallyTimeSpent" value="15549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32884097" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33701658" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39892185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39892185" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -730,122 +873,31 @@
     </option>
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="false" />
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
+    <MESSAGE value="fixed namespace and test issues&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed namespace and test issues&#10;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/SelectQueryTest.php</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/BaseQuery.php</url>
+          <line>108</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Adapters/MysqlAdapter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="136" selection-end="136" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1173">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/QueryInsert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="37" selection-start="85" selection-end="85" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1734">
-          <folding>
-            <marker date="1389322365646" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1389322365646" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1389322365646" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BaseQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="54" selection-end="54" vertical-scroll-proportion="46.423077" vertical-offset="1275" max-vertical-offset="3808">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="49" selection-end="49" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="85" selection-end="85" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="3553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="46" selection-end="46" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="95" selection-end="95" vertical-scroll-proportion="-0.65384614" vertical-offset="102" max-vertical-offset="2329">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="49" selection-end="49" vertical-scroll-proportion="-0.65384614" vertical-offset="51" max-vertical-offset="4420">
-          <folding>
-            <marker date="1389322217646" expanded="true" signature="3667:3714" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FindQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="888" selection-end="888" vertical-scroll-proportion="-1.3076923" vertical-offset="51" max-vertical-offset="2125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InsertQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="69" selection-end="69" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="1207">
-          <folding>
-            <marker date="1389322282660" expanded="true" signature="1431:1474" placeholder="INSERT INTO ..." />
-            <marker date="1389322282660" expanded="true" signature="1514:1567" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MemoryObjectStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QueryBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="11" selection-start="46" selection-end="46" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SelectQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="69" selection-end="69" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="2363">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UpdateQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="32" selection-start="103" selection-end="103" vertical-scroll-proportion="-0.0" vertical-offset="85" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="26" selection-start="597" selection-end="597" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="578">
@@ -855,7 +907,151 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="61" selection-start="35" selection-end="35" vertical-scroll-proportion="0.07538803" vertical-offset="0" max-vertical-offset="451">
+        <state line="2" column="7" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/QueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="44" selection-start="347" selection-end="347" vertical-scroll-proportion="0.56" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/MemoryObjectStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="857" selection-end="857" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/PHPUnit/Framework/Assert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2134" column="0" selection-start="69787" selection-end="69787" vertical-scroll-proportion="-5.269231" vertical-offset="35427" max-vertical-offset="47736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/UpdateQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="163" selection-end="163" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DummyDatabaseObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="19" selection-start="753" selection-end="753" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/UpdateQueryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="74" selection-start="709" selection-end="709" vertical-scroll-proportion="-5.230769" vertical-offset="255" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/Adapters/MysqlAdapter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="176" selection-end="176" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="34" selection-start="246" selection-end="246" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="8" selection-start="4249" selection-end="4249" vertical-scroll-proportion="-9.115385" vertical-offset="2109" max-vertical-offset="3502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/FindQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="20" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.3324397" vertical-offset="63" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="29" selection-start="3692" selection-end="3692" vertical-scroll-proportion="-4.769231" vertical-offset="1848" max-vertical-offset="2329">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="23" selection-start="5421" selection-end="5421" vertical-scroll-proportion="-2.27451" vertical-offset="2961" max-vertical-offset="4488">
+          <folding>
+            <marker date="1389458272351" expanded="true" signature="3848:3895" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/DatabaseConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/InsertQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="51" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-4.769231" vertical-offset="709" max-vertical-offset="1207">
+          <folding>
+            <marker date="1389458477429" expanded="true" signature="1446:1495" placeholder="INSERT INTO ..." />
+            <marker date="1389458477429" expanded="true" signature="1535:1600" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/SelectQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="20" selection-start="572" selection-end="572" vertical-scroll-proportion="9.807693" vertical-offset="663" max-vertical-offset="2363">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/InsertQueryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-4.6153846" vertical-offset="543" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/SelectQueryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-4.769231" vertical-offset="522" max-vertical-offset="1445">
+          <folding>
+            <marker date="1389454385005" expanded="true" signature="642:688" placeholder="SELECT {$thi..." />
+            <marker date="1389454385005" expanded="true" signature="877:953" placeholder="SELECT {$thi..." />
+            <marker date="1389454385005" expanded="true" signature="1382:1461" placeholder="SELECT {$thi..." />
+            <marker date="1389454385005" expanded="true" signature="1818:1873" placeholder="SELECT DISTI..." />
+            <marker date="1389454385005" expanded="true" signature="2110:2175" placeholder="SELECT count..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DreamblazeNet/SqlS/BaseQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="18" selection-start="5749" selection-end="5749" vertical-scroll-proportion="9.574713" vertical-offset="0" max-vertical-offset="3944">
           <folding />
         </state>
       </provider>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class DatabaseConfig{
     public $host;

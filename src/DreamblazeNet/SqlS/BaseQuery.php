@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 abstract class BaseQuery {
     
@@ -29,7 +29,10 @@ abstract class BaseQuery {
         'limit',
         'offset'
     );
-    
+
+    /***
+     * @param DatabaseObject $dbobject
+     */
     public function __construct($dbobject) {
         $this->table = $dbobject::$table;
         $this->dbname = $dbobject::$dbname;
@@ -46,7 +49,7 @@ abstract class BaseQuery {
     public function execute(){
         $sql = $this->build_sql();
         $values = $this->build_sql_values();
-        $db = Database_Manager::get_database($this->dbname,$this->dbid);
+        $db = DatabaseManager::get_database($this->dbname,$this->dbid);
         $class_name = $this->result_name;
         switch($this->type){
             case 'none':
@@ -61,7 +64,7 @@ abstract class BaseQuery {
                 }, $values);
                 break;
             default:
-                throw new Database_Exception("Invalid Type {$this->type}");
+                throw new DatabaseException("Invalid Type {$this->type}");
                 break;
         }
         $this->result = $result;
@@ -97,7 +100,11 @@ abstract class BaseQuery {
     
     //--------------------------------------------
     //-- WHERE
-    
+
+    /***
+     * @param $conds
+     * @return BaseQuery | SelectQuery $this
+     */
     public function where($conds) {
         $conds = array_filter($conds,function($elem){
             return $elem != ''; 
@@ -124,12 +131,12 @@ abstract class BaseQuery {
                     $field = str_replace('.','_',$field);
                 }
                 if(strpos($value,'%') !== false){
-                    $marged_params[] = "$ufield LIKE :$field";
+                    $merged_params[] = "$ufield LIKE :$field";
                 } else {
-                    $marged_params[] = "$ufield = :$field";
+                    $merged_params[] = "$ufield = :$field";
                 }
             }
-            $sql_conds = array(join(' AND ', $marged_params));
+            $sql_conds = array(join(' AND ', $merged_params));
             $vals = $fields;
             $conds = array_merge($sql_conds, $vals);
         } else {
@@ -187,6 +194,7 @@ abstract class BaseQuery {
                 return "";
             }
         }
+        return "";
     }
     
     //--

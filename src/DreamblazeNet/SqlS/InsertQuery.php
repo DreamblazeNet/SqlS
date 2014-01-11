@@ -1,5 +1,5 @@
 <?php
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class InsertQuery extends BaseQuery {
     private $values = array();
@@ -48,10 +48,10 @@ class InsertQuery extends BaseQuery {
     protected function build() {
         $values = implode(',', $this->values);
         $tail = implode(' ', array($this->where));
-        if (count($fields) <= 1 && $fields[0] == "*") {
-            $sql = "INSERT INTO {$table} VALUES ($values) $tail";
+        if (count($this->fields) <= 1 && $this->fields[0] == "*") {
+            $sql = "INSERT INTO {$this->table} VALUES ($values) $tail";
         } else {
-            $sql = "INSERT INTO {$table} ($fields) VALUES ($values) $tail";
+            $sql = "INSERT INTO {$this->table} ($this->fields) VALUES ($values) $tail";
         }
         return trim($sql);
     }

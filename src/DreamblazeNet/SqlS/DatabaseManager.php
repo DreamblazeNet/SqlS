@@ -4,7 +4,7 @@
  * 
  */
 
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 use Exception;
 use PDOException;
 
@@ -59,8 +59,8 @@ class DatabaseManager {
     /**
      * @param $name
      * @param $id
-     * @return Database_Connection
-     * @throws Database_Exception
+     * @return DatabaseConnection
+     * @throws DatabaseException
      */
     public static function get_database($name,$id = null) {
         if (!isset(self::$connections[$name]) || (!is_null($id) && !isset(self::$connections[$name][$id]))) {  
@@ -74,7 +74,7 @@ class DatabaseManager {
             if(is_object(self::$connections[$name][$id]))
                 return self::$connections[$name][$id];
         }
-        throw new Database_Exception("DB-Connection $name $id not found");
+        throw new DatabaseException("DB-Connection $name $id not found");
     }
     
     private static function connect_database($name, $id) {
@@ -83,13 +83,13 @@ class DatabaseManager {
         } elseif(isset(self::$configs[$name][$id]) && is_array(self::$configs[$name])) {
             $info = self::$configs[$name][$id];
         } else {
-            throw new Database_Exception("No DB with name $name $id available!");
+            throw new DatabaseException("No DB with name $name $id available!");
         }
         
         self::$log->debug("Connecting to DATABASE [<b>$name</b>] dns: " . var_export($info,true));
         
-        if(get_class($info) != 'Dreamblaze\\SqlS\\Database_Config'){
-            throw new Database_Exception("Invalid config on $name $id");
+        if(get_class($info) != 'Dreamblaze\\SqlS\\DatabaseConfig'){
+            throw new DatabaseException("Invalid config on $name $id");
         }
         
         $connection = self::load_adapter_class($info);
@@ -103,14 +103,14 @@ class DatabaseManager {
 
     /**
      * @param $adapter
-     * @return Database_Connection
+     * @return DatabaseConnection
      */
     private static function load_adapter_class($info) {
-        $classname = 'Dreamblaze\\SqlS\\Adapter_' . ucwords($info->protocol);
+        $classname = 'Dreamblaze\\SqlS\\Adapters\\' . ucwords($info->protocol) . 'Adapter';
 
         try {
             /***
-             * @var Database_Connection
+             * @var DatabaseConnection
              */
             $connection = new $classname($info);
             $connection->log = self::$log;
@@ -121,7 +121,7 @@ class DatabaseManager {
 
             $connection->set_timezone();
         } catch (PDOException $e) {
-            throw new Database_Exception(null,null,$e);
+            throw new DatabaseException(null,null,$e);
         }
         return $connection;
     }

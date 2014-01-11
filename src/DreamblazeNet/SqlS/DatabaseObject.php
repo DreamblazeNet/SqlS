@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class DatabaseObject {
     public static $dbname;
@@ -56,10 +56,12 @@ class DatabaseObject {
 
     /**
      * @param null $pk
-     * @return $this|array|bool|\PDOStatement
+     * @return FindQuery
      */
     public static function find($pk=null) {
-        $find = new Query_Find(get_called_class());
+        $calledClassName = get_called_class();
+        $calledClass = new $calledClassName();
+        $find = new FindQuery($calledClass);
         return $find->find($pk);
     }
 
@@ -97,6 +99,7 @@ class DatabaseObject {
         } elseif($this->has_relation($property)) {
             return $this->resolve_relation($property);
         }
+        throw new \BadFunctionCallException($property);
     }
     
     public function __isset($property) {
@@ -114,10 +117,11 @@ class DatabaseObject {
             $name = 'get_'.$name;
             return call_user_func_array(array($this,$name), $arguments);
         }
+        throw new \BadFunctionCallException();
     }
 
     public function reload() {
-        $obj = static::find($this->{static::$primary_key});
+        $obj = static::find($this->{static::$primary_key})->first();
         if ($obj) {
             $this->data = $obj->data;
             return true;
@@ -131,9 +135,9 @@ class DatabaseObject {
         $pk = static::$primary_key;
         $sql = "DELETE FROM {$table} WHERE {$pk}='{$this->$pk}'";
         if(isset(static::$dbid)){
-            $db = Database_Manager::get_database(static::$dbname,static::$dbid);
+            $db = DatabaseManager::get_database(static::$dbname,static::$dbid);
         } else {
-            $db = Database_Manager::get_database(static::$dbname,null);
+            $db = DatabaseManager::get_database(static::$dbname,null);
         }
         $db->query($sql);
         return true;
@@ -157,12 +161,12 @@ class DatabaseObject {
         if ($this->validate()) {
             $data = array_intersect_key($this->data, array_flip(static::$fields));
             if ($this->new) {
-                $sql = Query_Builder::insert(get_called_class());
+                $sql = QueryBuilder::insert(get_called_class());
                 $sql->values($data);
             } else {
                 $pk = static::$primary_key;
                 $data = array_intersect_key($data, array_flip($this->modified_data));
-                $sql = Query_Builder::update(get_called_class());
+                $sql = QueryBuilder::update(get_called_class());
                 $sql->set($data);
                 $sql->where(array($pk => $this->$pk));
             }
@@ -209,7 +213,7 @@ class DatabaseObject {
         if(isset($relation['type'])){
             $find = $model::find()->where(array($relation['field'] => $this->$relation['fk']));
         } else {
-            throw new Exception('No Relation-Type given'); 
+            throw new \Exception('No Relation-Type given');
         }
         
         if(isset($relation['conditions'])){
@@ -240,11 +244,11 @@ class DatabaseObject {
             $rel_name = $model_id;
             $rel_data = $find->first();
         } elseif($relation['type'] == 'has_many') {
-            if(!isset($model::$plural)) throw new Exception('No Plural for model ' . $model . ' available!');
+            if(!isset($model::$plural)) throw new \Exception('No Plural for model ' . $model . ' available!');
             $rel_name = $model::$plural;
             $rel_data = $find->all();
         } else {
-           throw new Exception('Unknown Relation-Type given'); 
+           throw new \Exception('Unknown Relation-Type given');
         }
 
         $this->data[$rel_name] = $rel_data;

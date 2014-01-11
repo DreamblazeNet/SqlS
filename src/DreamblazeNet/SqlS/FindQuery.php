@@ -17,7 +17,7 @@
  *    You should have received a copy of the GNU General Public License
  *    along with StupidPrlf.  If not, see <http://www.gnu.org/licenses/>.
  */
-namespace Dreamblaze\SqlS;
+namespace DreamblazeNet\SqlS;
 
 class FindQuery extends SelectQuery {
     private $per_page;
@@ -110,7 +110,8 @@ class FindQuery extends SelectQuery {
         $this->limit(1);
         $this->offset(0);
         $this->counting(true);
-        return $this->execute()->c;
+        $result = $this->execute();
+        return $result['c'];
     }
 
     private function find_by_pk($id) {
