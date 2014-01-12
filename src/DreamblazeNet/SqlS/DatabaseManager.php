@@ -5,8 +5,6 @@
  */
 
 namespace DreamblazeNet\SqlS;
-use Exception;
-use PDOException;
 
 class DatabaseManager {
 
@@ -48,11 +46,8 @@ class DatabaseManager {
     }
     
     private static function check_config($config){
-        if(get_class($config) != "Dreamblaze\\SqlS\\Database_Config"){
+        if(!($config instanceof \DreamblazeNet\SqlS\DatabaseConfig))
             throw new Exception('Wrong Database-Config format! Have to be an DatabaseConfig-Object');
-        } else {
-            return true;
-        }
     }
 
 
@@ -88,12 +83,8 @@ class DatabaseManager {
         
         self::$log->debug("Connecting to DATABASE [<b>$name</b>] dns: " . var_export($info,true));
         
-        if(get_class($info) != 'Dreamblaze\\SqlS\\DatabaseConfig'){
-            throw new DatabaseException("Invalid config on $name $id");
-        }
-        
-        $connection = self::load_adapter_class($info);
-        
+        $connection = self::load_adapter_class($info, self::$log);
+
         if(is_null($id)){
             self::$connections[$name] = $connection;
         } else {
@@ -106,14 +97,13 @@ class DatabaseManager {
      * @return DatabaseConnection
      */
     private static function load_adapter_class($info) {
-        $classname = 'Dreamblaze\\SqlS\\Adapters\\' . ucwords($info->protocol) . 'Adapter';
+        $classname = 'DreamblazeNet\\SqlS\\Adapters\\' . ucwords($info->protocol) . 'Adapter';
 
         try {
             /***
              * @var DatabaseConnection
              */
-            $connection = new $classname($info);
-            $connection->log = self::$log;
+            $connection = new $classname($info, self::$log);
             $connection->protocol = $info->protocol;
 
             if (isset($info->charset))

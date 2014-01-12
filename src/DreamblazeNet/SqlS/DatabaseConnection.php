@@ -45,8 +45,9 @@ abstract class DatabaseConnection {
      */
     static $DEFAULT_PORT = 0;
     
-    public function __construct($info) {
+    public function __construct(\DreamblazeNet\SqlS\DatabaseConfig $info, \Psr\Log\LoggerInterface $log) {
         try {
+            $this->log = $log;
             // unix sockets start with a /
             if ($info->host[0] != '/') {
                 $host = "host=$info->host";
