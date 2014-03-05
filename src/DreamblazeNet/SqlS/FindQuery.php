@@ -110,7 +110,9 @@ class FindQuery extends SelectQuery {
         $this->limit(1);
         $this->offset(0);
         $this->counting(true);
+        $this->type = 'none';
         $result = $this->execute();
+        $result = $result->fetch(\PDO::FETCH_ASSOC);
         return $result['c'];
     }
 
