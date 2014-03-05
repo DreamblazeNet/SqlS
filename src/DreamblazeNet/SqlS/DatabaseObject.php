@@ -117,7 +117,7 @@ class DatabaseObject {
             $name = 'get_'.$name;
             return call_user_func_array(array($this,$name), $arguments);
         }
-        throw new \BadFunctionCallException();
+        throw new \BadFunctionCallException($name);
     }
 
     public function reload() {
