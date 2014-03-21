@@ -125,18 +125,20 @@ abstract class DatabaseConnection {
         $this->log->debug($sql . ' => ' . var_export($values,true));
         try {
             if (!($sth = $this->connection->prepare($sql))){
+                $error = $sth->errorInfo();
                 $this->log->error('PDO Prepare ERROR!' . ' SQL:' . $sql);
-                throw new \Exception($this->connection->errorInfo(), $this->connection->errorCode());
+                throw new \Exception($error[0], $this->connection->errorCode());
             }
             $sth->setFetchMode(PDO::FETCH_ASSOC);
 
             if (!$sth->execute($values)){
-                $this->log->error(array('PDO Exec ERROR!', "SQL: " . $sql , "VALUES: " . var_export($values, true) ,'PDO: ' . $sth->errorInfo()));
-                throw new DatabaseException("PDO Exec ERROR! (1)", $sth->errorCode(), new \Exception($sth->errorInfo()));
+                $error = $sth->errorInfo();
+                $this->log->error(array('PDO Exec ERROR!', "SQL: " . $sql , "VALUES: " . var_export($values, true) ,'PDO: ' . $error[0]));
+                throw new DatabaseException("PDO Exec ERROR! " . $error[0], $sth->errorCode());
             }
         } catch (PDOException $e) {
-            $this->log->error(array($e->getMessage(), $e->getTraceAsString()));
-            throw new DatabaseException("PDO Exec ERROR! (1)", $e->getCode() , $e);
+            $this->log->error($e->getMessage());
+            throw new DatabaseException("PDO Exec ERROR! " . $e->getCode(), 0 , $e);
         }
 
         return $sth;

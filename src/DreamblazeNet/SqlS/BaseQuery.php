@@ -103,7 +103,7 @@ abstract class BaseQuery {
 
     /***
      * @param $conds
-     * @return BaseQuery | SelectQuery $this
+     * @return BaseQuery | SelectQuery | FindQuery $this
      */
     public function where($conds) {
         $conds = array_filter($conds,function($elem){

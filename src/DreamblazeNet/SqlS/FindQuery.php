@@ -59,6 +59,10 @@ class FindQuery extends SelectQuery {
         return $result;
     }
     
+    /**
+     * @param null|int|string $pk PrimaryKeyColumn search value
+     * @return FindQuery
+     */
     public function find($pk=null) {
         if(!is_null($pk)) {
             return $this->find_by_pk($pk);
@@ -79,6 +83,9 @@ class FindQuery extends SelectQuery {
         return $this;
     }
     
+    /**
+     * @return array
+     */
     public function all() {
         $this->type = 'many';
         $this->limit($this->per_page);
@@ -86,6 +93,10 @@ class FindQuery extends SelectQuery {
         return $this->execute();
     }
     
+    /**
+     * @param $field
+     * @return array
+     */
     public function distinct_all($field) {
         $this->fields = array($field);
         $this->type = 'many';
@@ -95,17 +106,26 @@ class FindQuery extends SelectQuery {
         return $this->execute();
     }
 
+    /**
+     * @return DatabaseObject
+     */
     public function first() {
         $this->limit(1);
         return $this->execute();
     }
     
+    /**
+     * @return DatabaseObject
+     */
     public function last() {
         $this->order($this->pk . ' DESC');
         $this->limit(1);
         return $this->execute();
     }
     
+    /**
+     * @return int
+     */
     public function count() {
         $this->limit(1);
         $this->offset(0);
